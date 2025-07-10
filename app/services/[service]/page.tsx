@@ -4,17 +4,6 @@ import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const serviceNames: Record<string, string> = {
-  "identity-branding": "Identity and Branding",
-  "visual-communication": "Visual Communication",
-  "multimedia-web": "Multimedia and Web",
-  "event-management": "Event Management",
-  "medical-communications": "Medical Communications",
-  "digital-marketing": "Digital Marketing",
-  "content-creation": "Content Creation",
-  "brand-reminders": "Brand Reminders",
-};
-
 const contentLines = [
   "Social Media And Website Content",
   "Script Writing ..............",

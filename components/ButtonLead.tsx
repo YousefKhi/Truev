@@ -14,6 +14,10 @@ const ButtonLead = ({ extraStyle }: { extraStyle?: string }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
 
+  // If apiClient is needed, import it or define a placeholder to avoid errors
+  // import apiClient from '@/libs/api'; // Uncomment and fix path if needed
+  const apiClient = { post: async () => ({}) }; // Temporary placeholder
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
 

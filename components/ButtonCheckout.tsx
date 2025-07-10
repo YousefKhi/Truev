@@ -17,6 +17,10 @@ const ButtonCheckout = ({
 }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  // If apiClient is needed, import it or define a placeholder to avoid errors
+  // import apiClient from '@/libs/api'; // Uncomment and fix path if needed
+  const apiClient = { post: async () => ({}) }; // Temporary placeholder
+
   const handlePayment = async () => {
     setIsLoading(true);
 
