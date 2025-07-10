@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import SplashScreen from '../components/SplashScreen';
 import MainMenu from '../components/MainMenu';
+import { Suspense } from "react";
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
@@ -16,12 +17,12 @@ export default function Home() {
   }, [searchParams]);
 
   return (
-    <>
+    <Suspense fallback={null}>
       {showSplash ? (
         <SplashScreen onFinish={() => setShowSplash(false)} />
       ) : (
         <MainMenu />
       )}
-    </>
+    </Suspense>
   );
 }

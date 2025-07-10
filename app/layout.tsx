@@ -17,11 +17,12 @@ export const viewport: Viewport = {
 // This adds default SEO tags to all pages in our app.
 // You can override them in each page passing params to getSOTags() function.
 export const metadata = {
-	title: "Your App Name",
-	description: "Your App Description",
-	keywords: "Your App Keywords",
-	author: "Your Name",
+	title: "True Vision Creative Designs",
+	description: "True Vision Creative Designs: Creative agency for branding, digital marketing, events, multimedia, and medical communications.",
+	keywords: "branding, digital marketing, events, multimedia, medical communications, creative agency, true vision creative designs",
+	author: "True Vision Creative Designs",
 	robots: "index, follow",
+	metadataBase: new URL('https://truevisioncreativedesigns.com'),
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
