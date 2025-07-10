@@ -16,7 +16,7 @@ const ButtonLead = ({ extraStyle }: { extraStyle?: string }) => {
 
   // If apiClient is needed, import it or define a placeholder to avoid errors
   // import apiClient from '@/libs/api'; // Uncomment and fix path if needed
-  const apiClient = { post: async () => ({}) }; // Temporary placeholder
+  const apiClient = { post: async (_url: string, _data: any) => ({}) }; // Temporary placeholder, accepts two args
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
