@@ -19,7 +19,7 @@ const ButtonCheckout = ({
 
   // If apiClient is needed, import it or define a placeholder to avoid errors
   // import apiClient from '@/libs/api'; // Uncomment and fix path if needed
-  const apiClient = { post: async () => ({ url: '/' }) }; // Temporary placeholder with url
+  const apiClient = { post: async (_url: string, _data: any) => ({ url: '/' }) }; // Temporary placeholder with url, accepts two args
 
   const handlePayment = async () => {
     setIsLoading(true);
