@@ -3,12 +3,12 @@ import { ConfigProps } from "./types/config";
 
 const config = {
   // REQUIRED
-  appName: "ShipFast",
+  appName: "True Vision Creative Designs",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "The NextJS boilerplate with all you need to build your SaaS, AI tool, or any other web app.",
+    "True Vision Creative Designs: Creative agency for branding, digital marketing, events, multimedia, and medical communications.",
   // REQUIRED (no https://, not trailing slash at the end, just the naked domain)
-  domainName: "shipfa.st",
+  domainName: "truevisioncreativedesigns.com",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (resend.supportEmail) otherwise customer support won't work.
     id: "",
@@ -20,10 +20,7 @@ const config = {
     plans: [
       {
         // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
-        priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_1Niyy5AxyNprDp7iZIqEyD2h"
-            : "price_456",
+        priceId: "price_truevision_starter",
         //  REQUIRED - Name of the plan, displayed on the pricing page
         name: "Starter",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
@@ -34,18 +31,15 @@ const config = {
         priceAnchor: 149,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "Branding & Design",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
+          { name: "Digital Marketing" },
+          { name: "Event Management" },
+          { name: "Multimedia & Web" },
         ],
       },
       {
-        priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_1O5KtcAxyNprDp7iftKnrrpw"
-            : "price_456",
+        priceId: "price_truevision_advanced",
         // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
         isFeatured: true,
         name: "Advanced",
@@ -54,13 +48,14 @@ const config = {
         priceAnchor: 299,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "Full Creative Suite",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
-          { name: "1 year of updates" },
-          { name: "24/7 support" },
+          { name: "Branding & Design" },
+          { name: "Digital Marketing" },
+          { name: "Event Management" },
+          { name: "Multimedia & Web" },
+          { name: "Medical Communications" },
+          { name: "Priority Support" },
         ],
       },
     ],
@@ -73,11 +68,9 @@ const config = {
   },
   resend: {
     // REQUIRED — Email 'From' field to be used when sending magic login links
-    fromNoReply: `ShipFast <noreply@resend.shipfa.st>`,
-    // REQUIRED — Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
-    fromAdmin: `Marc at ShipFast <marc@resend.shipfa.st>`,
-    // Email shown to customer if they need support. Leave empty if not needed => if empty, set up Crisp above, otherwise you won't be able to offer customer support."
-    supportEmail: "marc.louvion@gmail.com",
+    fromNoReply: `True Vision Creative Designs <noreply@truevisioncreativedesigns.com>`,
+    fromAdmin: `Support at True Vision Creative Designs <support@truevisioncreativedesigns.com>`,
+    supportEmail: "support@truevisioncreativedesigns.com",
   },
   colors: {
     // REQUIRED — The DaisyUI theme to use (added to the main layout.js). Leave blank for default (light & dark mode). If you use any theme other than light/dark, you need to add it in config.tailwind.js in daisyui.themes.
