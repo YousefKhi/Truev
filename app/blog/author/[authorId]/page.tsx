@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { authors, articles } from "../../_assets/content";
 import CardArticle from "../../_assets/components/CardArticle";
-import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
 export async function generateMetadata({
@@ -11,11 +10,11 @@ export async function generateMetadata({
 }) {
   const author = authors.find((author) => author.slug === params.authorId);
 
-  return getSEOTags({
+  return {
     title: `${author.name}, Author at ${config.appName}'s Blog`,
     description: `${author.name}, Author at ${config.appName}'s Blog`,
     canonicalUrlRelative: `/blog/author/${author.slug}`,
-  });
+  };
 }
 
 export default async function Author({

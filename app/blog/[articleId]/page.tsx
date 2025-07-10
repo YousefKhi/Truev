@@ -3,7 +3,6 @@ import Script from "next/script";
 import { articles } from "../_assets/content";
 import BadgeCategory from "../_assets/components/BadgeCategory";
 import Avatar from "../_assets/components/Avatar";
-import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
 export async function generateMetadata({
@@ -13,7 +12,7 @@ export async function generateMetadata({
 }) {
   const article = articles.find((article) => article.slug === params.articleId);
 
-  return getSEOTags({
+  return {
     title: article.title,
     description: article.description,
     canonicalUrlRelative: `/blog/${article.slug}`,
@@ -33,7 +32,7 @@ export async function generateMetadata({
         type: "website",
       },
     },
-  });
+  };
 }
 
 export default async function Article({

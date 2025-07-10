@@ -1,7 +1,6 @@
 import { categories, articles } from "../../_assets/content";
 import CardArticle from "../../_assets/components/CardArticle";
 import CardCategory from "../../_assets/components/CardCategory";
-import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
 export async function generateMetadata({
@@ -13,11 +12,11 @@ export async function generateMetadata({
     (category) => category.slug === params.categoryId
   );
 
-  return getSEOTags({
+  return {
     title: `${category.title} | Blog by ${config.appName}`,
     description: category.description,
     canonicalUrlRelative: `/blog/category/${category.slug}`,
-  });
+  };
 }
 
 export default async function Category({
