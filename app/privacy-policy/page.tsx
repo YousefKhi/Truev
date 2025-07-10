@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
 // CHATGPT PROMPT TO GENERATE YOUR PRIVACY POLICY — replace with your own data 👇
@@ -25,10 +24,10 @@ import config from "@/config";
 
 // Please write a simple privacy policy for my site. Add the current date.  Do not add or explain your reasoning. Answer:
 
-export const metadata = getSEOTags({
+export const metadata = {
   title: `Privacy Policy | ${config.appName}`,
   canonicalUrlRelative: "/privacy-policy",
-});
+};
 
 const PrivacyPolicy = () => {
   return (
