@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 const services = [
   { name: "Identity and Branding", icon: "/V logo.png", route: "/services/identity-branding" },
