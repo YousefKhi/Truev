@@ -375,6 +375,14 @@ export default function ServicePage() {
           <div className="absolute right-12 bottom-8 z-20 text-right select-none">
             <span className="text-white font-playlist text-4xl italic drop-shadow-lg opacity-80">Solutions</span>
           </div>
+          {/* Back to Main Menu button bottom center */}
+          <button
+            onClick={() => router.push('/?from=service')}
+            className="fixed left-1/2 -translate-x-1/2 bottom-10 z-30 px-6 py-2 bg-[#1A3366] text-white rounded-md text-base font-medium hover:bg-[#16305a] transition-colors"
+            style={{ minWidth: 160 }}
+          >
+            Back to Main Menu
+          </button>
         </>
       )}
       {isDigital && (
@@ -421,20 +429,20 @@ export default function ServicePage() {
             </span>
           </div>
           {/* Main overlays */}
-          <div className="absolute left-1/4 top-1/3 z-20 select-none">
+          <div className="absolute left-14 top-1/3 z-20 select-none">
             <span className="text-white font-playlist text-5xl md:text-6xl font-bold drop-shadow-lg">GAMES</span>
           </div>
-          <div className="absolute left-1/4 top-1/2 z-20 select-none">
+          <div className="absolute left-14 top-1/2 z-20 select-none">
             <span className="text-white font-square text-3xl md:text-4xl font-bold drop-shadow-lg">Educational Programs</span>
           </div>
-          <div className="absolute right-1/4 top-1/3 z-20 select-none">
+          <div className="absolute right-14 top-1/3 z-20 select-none">
             <span className="text-white font-square text-4xl md:text-5xl font-bold drop-shadow-lg">Interactive Media</span><br />
             <span className="text-white font-square text-2xl md:text-3xl drop-shadow-lg">And E-detailing</span>
           </div>
-          <div className="absolute left-1/4 bottom-16 z-20 select-none">
+          <div className="absolute left-14 bottom-16 z-20 select-none">
             <span className="text-white font-square text-2xl md:text-3xl font-bold drop-shadow-lg">Presentation Show And Websites</span>
           </div>
-          <div className="absolute left-1/4 top-1/4 z-20 select-none">
+          <div className="absolute left-14 top-1/4 z-20 select-none">
             <span className="text-white font-square text-2xl md:text-3xl font-bold drop-shadow-lg">OBJECTIVE</span>
           </div>
           <button
